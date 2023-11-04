@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import joblib
 import numpy as np
+import sklearn
 app = Flask(__name__, template_folder='views')
 model = joblib.load("model/jantung_model.pkl")
 
@@ -41,6 +42,14 @@ def submit_form():
         return 'Heart Disease'
     else:
         return 'No Heart Disease'
+
+@app.route('/versions')
+def versions():
+    numpy_version = np.__version__
+    sklearn_version = sklearn.__version__
+    joblib_version = joblib.__version__
+    
+    return f"NumPy version: {numpy_version}<br>scikit-learn version: {sklearn_version}<br>joblib version: {joblib_version}" 
 
 if __name__ == '__main__':
     app.run()
