@@ -234,14 +234,16 @@
         <form  role="form" >
           <div class="row">
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jenis Kelamin : </label>
               <select name="sex" id="sex" class="form-select">
-                <option value="">Select Gender</option>
-                <option value="0">Female</option>
-                <option value="1">Male</option>
+                <option value="">Select Jenis Kelamin</option>
+                <option value="0">Perempuan</option>
+                <option value="1">Laki-Laki</option>
               </select>
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jenis Nyeri Dada : </label>
               <select name="cp" id="cp" class="form-select">
                 <option value="">Select Chest Pain Type</option>
                 <option value="1">typical angina</option>
@@ -252,6 +254,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jenis Gula Darah Puasa</label>
               <select name="fbs" id="fbs" class="form-select">
                 <option value="">Select Gula Darah Puasa</option>
                 <option value="0">Under or Equal 120mg/dl</option>
@@ -260,6 +263,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Rentang Kondisi Jantung Saat Istirahat</label>
               <select name="restecg" id="restecg" class="form-select">
                 <option value="">Select Rentang Kondisi Jantung Saat Istirahat</option>
                 <option value="0">Normal</option>
@@ -269,6 +273,7 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Induksi Saat Olahraga Dingin</label>
               <select name="exang" id="exang" class="form-select">
                 <option value="">Select Induksi Saat Olahraga Dingin</option>
                 <option value="0">Tidak</option>
@@ -277,10 +282,12 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Satuan Depresi ST</label>
               <input type="text" name="oldpeak" class="form-control" id="oldpeak" placeholder="Masukan Satuan Depresi ST" required>
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jenis Kemiringan Segmen ST</label>
               <select name="slope" id="slope" class="form-select">
                 <option value="">Select Kemiringan segmen ST</option>
                 <option value="0">Downsloping</option>
@@ -290,21 +297,23 @@
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jumlah Pembulu darah floroskop</label>
               <select name="ca" id="ca" class="form-select">
                 <option value="">Select Jumlah pembuluh darah yang diwarnai oleh fluoroskop</option>
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
-                <option value="4">4</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
               </select>
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group mt-3">
+              <label for="exampleInputEmail1" class="form-label">Jenis Cacat</label>
               <select name="thal" id="thal" class="form-select">
                 <option value="">Select Cacat</option>
-                <option value="1">1</option>
                 <option value="0">0</option>
+                <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select> 
@@ -458,15 +467,12 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="container">
-              <div class="text-center mt-3">
-                <p>Berdasarkan prediksi yang dilakukan oleh Model Heart Disease Prediciton dengan paramater yang sudah diisi maka hasilnya sebagai berikut </p1>
-                <p id="resultText"></p>
+              <div class="text-center mt-3"> 
+                <h2>Hasil Prediksi Anda</h2>
                 <br>
+                <p class="p2">Dari gejala-gejala yang anda rasakan, sistem menilai anda <strong><span class="text-danger">Terindikasi</span></strong> Terkena Penyakit Jantung</p>
                 <br>
-                <h2 class="text-danger">Terindikasi Terkena Penyakit Jantung</h2>
-                <br>
-                <br>
-                <p>Untuk tindakan lebih lanjut mengenai hasil dari prediksi model ini, diperlukan untuk menghubungi tenaga medis dengan keahlian dibidang Penyakit Jantung. Prediksi ini memprediksi berdasarkan data yang diberikan oleh pengisi sehingga hasilnya bisa terdapat kesalahan dan tidak selalu benar</p>
+                <p class="p2">Anda dianjurkan melakukan pemeriksaan lebih lanjut untuk mengetahui penanganan dan pengobatanan dari penyakit jantung</p>
               </div>
             </div>
           </div>
@@ -480,15 +486,12 @@
         <div class="modal-content">
           <div class="modal-body">
             <div class="container">
-              <div class="text-center mt-3">
-                <p>Berdasarkan prediksi yang dilakukan oleh Model Heart Disease Prediciton dengan paramater yang sudah diisi maka hasilnya sebagai berikut </p1>
-                <p id="resultText"></p>
+              <div class="text-center mt-3"> 
+                <h2>Hasil Prediksi Anda</h2>
                 <br>
+                <p class="p2">Dari gejala-gejala yang anda rasakan, sistem menilai anda <strong><span class="text-success">Tidak Terindikasi</span></strong> Terkena Penyakit Jantung</p>
                 <br>
-                <h2 class="text-success">Tidak Terindikasi Terkena Penyakit Jantung</h2>
-                <br>
-                <br>
-                <p>Untuk tindakan lebih lanjut mengenai hasil dari prediksi model ini, diperlukan untuk menghubungi tenaga medis dengan keahlian dibidang Penyakit Jantung. Prediksi ini memprediksi berdasarkan data yang diberikan oleh pengisi sehingga hasilnya bisa terdapat kesalahan dan tidak selalu benar</p>
+                <p class="p2">Anda dianjurkan melakukan pemeriksaan lebih lanjut untuk mengetahui penanganan dan pengobatanan dari penyakit jantung</p>
               </div>
             </div>
           </div>
@@ -597,7 +600,7 @@
           var slope = $("#slope").val();
           var ca = $("#ca").val();
           var thal = $("#thal").val();
-
+          // $('#Modal-1').modal('show');
           $.ajax({
             type: "POST",
             url: "/submit",  // Rute Flask untuk menangani permintaan formulir
